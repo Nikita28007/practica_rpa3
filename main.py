@@ -21,7 +21,7 @@ for row in ws.iter_cols(min_col=2, max_col=2, max_row=5, min_row=2, values_only=
     for cell in row:
         nom_familia.append(cell)
         print(cell)
-
+#r
 print(cod_familia)
 print(nom_familia)
 
