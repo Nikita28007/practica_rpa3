@@ -1,0 +1,100 @@
+ %% NO MODIFIQUE NI ELIMINE ESTE ARCHIVO. %% 
+ %% Este archivo contiene informacion acerca de la instalacion de una aplicacion. %% 
+ %% Se utilizara para quitar automaticamente de su PC todos los componentes de la aplicacion, si elige hacerlo. %% 
+
+
+NOTE: Inicio de la seccion bootstrapper
+
+CONFIG: Title: "Stock"
+
+ACTION: RegKey: "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion", "SharedDLLs"
+
+ACTION: SystemFile: "C:\WINDOWS\SYSTEM32\VB6STKIT.DLL"
+(El archivo en disco ya estaba actualizado)
+
+ACTION: SystemFile: "C:\WINDOWS\SYSTEM32\COMCAT.DLL"
+(El archivo en disco ya estaba actualizado)
+
+ACTION: SystemFile: "C:\WINDOWS\SYSTEM32\VB6ES.DLL"
+(El archivo en disco ya estaba actualizado)
+
+ACTION: SystemFile: "C:\WINDOWS\SYSTEM32\STDOLE2.TLB"
+(El archivo en disco ya estaba actualizado)
+
+ACTION: SystemFile: "C:\WINDOWS\SYSTEM32\ASYCFILT.DLL"
+(El archivo en disco ya estaba actualizado)
+
+ACTION: SystemFile: "C:\WINDOWS\SYSTEM32\OLEPRO32.DLL"
+(El archivo en disco ya estaba actualizado)
+
+ACTION: SystemFile: "C:\WINDOWS\SYSTEM32\OLEAUT32.DLL"
+(El archivo en disco ya estaba actualizado)
+
+ACTION: SystemFile: "C:\WINDOWS\SYSTEM32\msvbvm60.dll"
+(El archivo en disco ya estaba actualizado)
+
+ACTION: DllSelfRegister: "C:\WINDOWS\SYSTEM32\COMCAT.DLL"
+
+ACTION: TLBRegister: "C:\WINDOWS\SYSTEM32\STDOLE2.TLB"
+
+ACTION: DllSelfRegister: "C:\WINDOWS\SYSTEM32\OLEPRO32.DLL"
+
+ACTION: DllSelfRegister: "C:\WINDOWS\SYSTEM32\OLEAUT32.DLL"
+
+ACTION: DllSelfRegister: "C:\WINDOWS\SYSTEM32\msvbvm60.dll"
+
+NOTE: Final de la seccion bootstrapper
+
+NOTE: Inicializando el programa principal de instalacion 'Setup1.exe'....
+
+ACTION: CreateDir: "C:\Program Files (x86)\Stock"
+
+ACTION: CreateDir: "C:\Users\777\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Stock"
+
+ACTION: PrivateFile: "C:\Program Files (x86)\Stock\stock.accdb"
+(No se puede encontrar el archivo o es de una version antigua; se ha copiado el archivo nuevo)
+
+ACTION: SharedFile: "C:\Windows\System32\MSMSKES.DLL"
+(No se puede encontrar el archivo o es de una version antigua; se ha copiado el archivo nuevo)
+
+ACTION: SharedFile: "C:\Windows\System32\msmask32.ocx"
+(No se puede encontrar el archivo o es de una version antigua; se ha copiado el archivo nuevo)
+
+ACTION: SharedFile: "C:\Windows\System32\FLXGDES.DLL"
+(No se puede encontrar el archivo o es de una version antigua; se ha copiado el archivo nuevo)
+
+ACTION: SharedFile: "C:\Windows\System32\msflxgrd.ocx"
+(No se puede encontrar el archivo o es de una version antigua; se ha copiado el archivo nuevo)
+
+ACTION: SharedFile: "C:\Windows\System32\MSCMCES.DLL"
+(No se puede encontrar el archivo o es de una version antigua; se ha copiado el archivo nuevo)
+
+ACTION: SharedFile: "C:\Windows\System32\MSCOMCTL.OCX"
+(No se puede encontrar el archivo o es de una version antigua; se ha copiado el archivo nuevo)
+
+ACTION: SharedFile: "C:\Windows\System32\Msado60_Backcompat.tlb"
+(No se puede encontrar el archivo o es de una version antigua; se ha copiado el archivo nuevo)
+
+ACTION: SharedFile: "C:\Windows\System32\STDFTES.DLL"
+(No se puede encontrar el archivo o es de una version antigua; se ha copiado el archivo nuevo)
+
+ACTION: SharedFile: "C:\Windows\System32\msstdfmt.dll"
+(No se puede encontrar el archivo o es de una version antigua; se ha copiado el archivo nuevo)
+
+ACTION: PrivateFile: "C:\Program Files (x86)\Stock\Stock.exe"
+(No se puede encontrar el archivo o es de una version antigua; se ha copiado el archivo nuevo)
+
+ACTION: DllSelfRegister: "C:\Windows\System32\msmask32.ocx"
+
+ACTION: DllSelfRegister: "C:\Windows\System32\msflxgrd.ocx"
+
+ACTION: DllSelfRegister: "C:\Windows\System32\MSCOMCTL.OCX"
+
+ACTION: DllSelfRegister: "C:\Windows\System32\msstdfmt.dll"
+
+ACTION: ShellLink: "Stock", "Stock"
+
+ACTION: RegKey: "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion", "App Paths\Stock.exe"
+
+ACTION: RegValue: "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\Stock.exe", ""
+
