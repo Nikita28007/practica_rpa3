@@ -21,15 +21,12 @@ for row in ws.iter_cols(min_col=2, max_col=2, max_row=5, min_row=2, values_only=
     for cell in row:
         nom_familia.append(cell)
         print(cell)
-#r
+
 print(cod_familia)
 print(nom_familia)
 
 app = Application(backend="uia").start('Stock/Stock.exe')
 # .connect(title='Control de deposito',timeout=10)
-dialog = app['Stock']
-# dlg = app.top_window()
-var = app['dialog']['Control de deposito']
 # app.ControlDeDeposito.print_control_identifiers()
 menuMantenimiento = app.ControlDeDeposito.child_window(title="Mantenimiento", control_type="MenuItem").wrapper_object()
 menuMantenimiento.click_input()
@@ -80,9 +77,6 @@ buscarButton = app.ControlDeDeposito.child_window(title="Buscar", auto_id="2", c
 detalle = app.ControlDeDeposito.child_window(auto_id="6", control_type="Edit").wrapper_object()
 costo = app.ControlDeDeposito.child_window(auto_id="9", control_type="Edit").wrapper_object()
 guardar = app.ControlDeDeposito.child_window(title="Guardar", auto_id="10", control_type="Button").wrapper_object()
-# familia.type_keys(productos[20], with_spaces=True)
-# buscarButton.click_input()
-# appBuscar.BuscarAlgo.print_control_identifiers()
 confirmarFamilia = app.ControlDeDeposito.child_window(class_name="ThunderRT6FormDC").wrapper_object()
 index = 0
 while index <= 9:
