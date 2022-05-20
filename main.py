@@ -94,7 +94,7 @@ while index <= 9:
     buscarButton.click_input()
     handle = findwindows.find_window(best_match='Buscar algo')
     appBuscar = Application(backend="win32").connect(handle=handle)
-    confirmarFamilia.click_input()
+    appBuscar.BuscarAlgo.click_input()
     send_keys('%{F4}')
     guardar.click_input()
     index += 1
