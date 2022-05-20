@@ -17,9 +17,8 @@ print(productos, len(productos))
 app = Application(backend="uia").start('Stock/Stock.exe')
 menuMantenimiento = app.ControlDeDeposito.child_window(title="Mantenimiento", control_type="MenuItem").wrapper_object()
 menuMantenimiento.click_input()
-# app.ControlDeDeposito.print_control_identifiers()
 send_keys('{DOWN}{ENTER}')
-# app.ControlDeDeposito.print_control_identifiers()
+
 
 numero = app.ControlDeDeposito.child_window(auto_id="7", control_type="Edit").wrapper_object()
 nombre = app.ControlDeDeposito.child_window(auto_id="8", control_type="Edit").wrapper_object()
@@ -30,6 +29,7 @@ costo = app.ControlDeDeposito.child_window(auto_id="9", control_type="Edit").wra
 guardar = app.ControlDeDeposito.child_window(title="Guardar", auto_id="10", control_type="Button").wrapper_object()
 familia.type_keys(productos[20], with_spaces=True)
 buscarButton.click_input()
+# tests *********************
 # appBuscar.BuscarAlgo.print_control_identifiers()
 # confirmarFamilia = app.ControlDeDeposito.child_window(class_name="MSFlexGridWndClass").wrapper_object()
 # handle = findwindows.find_window(best_match='Buscar algo')
@@ -38,6 +38,7 @@ buscarButton.click_input()
 # appBuscar.BuscarAlgo.click_input()
 # # confirmarFamilia.click_input(coords=(500, 100))
 # send_keys('%{F4}')
+# ****************************
 index = 0
 while index <= 9:
     numero.type_keys(productos[index])
