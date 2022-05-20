@@ -19,7 +19,7 @@ menuMantenimiento = app.ControlDeDeposito.child_window(title="Mantenimiento", co
 menuMantenimiento.click_input()
 # app.ControlDeDeposito.print_control_identifiers()
 send_keys('{DOWN}{ENTER}')
-app.ControlDeDeposito.print_control_identifiers()
+# app.ControlDeDeposito.print_control_identifiers()
 
 numero = app.ControlDeDeposito.child_window(auto_id="7", control_type="Edit").wrapper_object()
 nombre = app.ControlDeDeposito.child_window(auto_id="8", control_type="Edit").wrapper_object()
@@ -28,10 +28,16 @@ buscarButton = app.ControlDeDeposito.child_window(title="Buscar", auto_id="2", c
 detalle = app.ControlDeDeposito.child_window(auto_id="6", control_type="Edit").wrapper_object()
 costo = app.ControlDeDeposito.child_window(auto_id="9", control_type="Edit").wrapper_object()
 guardar = app.ControlDeDeposito.child_window(title="Guardar", auto_id="10", control_type="Button").wrapper_object()
-# familia.type_keys(productos[20], with_spaces=True)
-# buscarButton.click_input()
+familia.type_keys(productos[20], with_spaces=True)
+buscarButton.click_input()
 # appBuscar.BuscarAlgo.print_control_identifiers()
-confirmarFamilia = app.ControlDeDeposito.child_window(class_name="ThunderRT6FormDC").wrapper_object()
+# confirmarFamilia = app.ControlDeDeposito.child_window(class_name="MSFlexGridWndClass").wrapper_object()
+# handle = findwindows.find_window(best_match='Buscar algo')
+# appBuscar = Application(backend="win32").connect(handle=handle)
+# appBuscar.BuscarAlgo.print_control_identifiers()
+# appBuscar.BuscarAlgo.click_input()
+# # confirmarFamilia.click_input(coords=(500, 100))
+# send_keys('%{F4}')
 index = 0
 while index <= 9:
     numero.type_keys(productos[index])
@@ -42,7 +48,7 @@ while index <= 9:
     buscarButton.click_input()
     handle = findwindows.find_window(best_match='Buscar algo')
     appBuscar = Application(backend="win32").connect(handle=handle)
-    confirmarFamilia.click_input()
+    appBuscar.BuscarAlgo.click_input()
     send_keys('%{F4}')
     guardar.click_input()
     index += 1
